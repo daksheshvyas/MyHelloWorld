@@ -1,5 +1,8 @@
 main(){
 
-printf("Hello WOrkd");
+printf("Hello World");
+printf("Hello World ROcks");
+
+return;
 
 }
