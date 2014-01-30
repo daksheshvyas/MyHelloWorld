@@ -26,7 +26,7 @@ env:
     - COVERITY_SCAN_BUILD_COMMAND_PREPEND=""
 
     # Insert the cov-build build commmand here
-    - COVERITY_SCAN_BUILD_COMMAND=""
+    - COVERITY_SCAN_BUILD_COMMAND="gcc HelloWorld.c"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
     - secure: "D8oM8w/Qe3nnqk8jYr8yMDVnAnVk1TpegPhgfr69Y8blz6UiCW/LoS/EsVahoe/YS48swCwo9RdYdvTIXFoXAzjvJzHF/s4yAGpxQ9I4ObbqtXEEfHGPCSiJa4Re+o3zsmeJEuesfQht2DpZ1UW5eVRej8MJojBmJKvzdCnpD2s="
