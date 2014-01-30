@@ -18,7 +18,7 @@ env:
 
     # Regular expression selects on which branches to run analysis
     # Be aware of quotas. Do not run on every branch/commit
-    - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
+    - COVERITY_SCAN_BRANCH_PATTERN="master"
 
     # Optionally execute a command immediately before cov-build,
     #   pre-configuration required for the COVERITY_SCAN_BUILD_COMMAND
