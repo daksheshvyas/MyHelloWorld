@@ -33,7 +33,8 @@ env:
     - secure: "W/Ryf86TT4X0ICW/u/4N1wTQ0a41qA+PdOI+ttKpNZPpXHYu2zXKSTIYGIRza25XnNzxxFXN4OXvGiWCdv+BgTHw2tBBTdEewpAAJg0dP1ypzwVbz8A+jWvMPhfgcW0qH+f4n1KPX9n1A2AwgVG5s2L1JcuTZSfwkcvWh/kaZZU="
     # ---- END Project-specific configuration
 
-    - COVERITY_SCAN_BUILD_URL="http://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
+    #- COVERITY_SCAN_BUILD_URL="http://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
+    - COVERITY_SCAN_BUILD_URL=""https://gist.github.com/aceofspades/4bd0dd25f2cbfde5093c/raw"
     - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
 
     # -- END Coverity Scan ENV
