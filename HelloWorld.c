@@ -1,8 +1,12 @@
-main(){
+#include <stdio.h>
+int main(){
 
-printf("Hello World");
-printf("Hello World ROcks");
+        int x,i;
+        for(i=0;i<x;i++)
+                printf("Hello World");
 
-return;
+        printf("Hello World printed %d times",x);
+
+        return 0;
 
 }
