@@ -16,6 +16,7 @@ env:
        # The build command with all of the arguments that you would apply to a manual `cov-build`
      # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
     #
-    # Examples
     # Examples:
+    # make –j4
+
 script: gcc HelloWorld.c
