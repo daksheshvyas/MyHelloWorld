@@ -14,6 +14,22 @@ env:
     - COVERITY_SCAN_BUILD_COMMAND_PREPEND=""
    
        # The build command with all of the arguments that you would apply to a manual `cov-build`
+     # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
+    #
+    # Examples:
+    # make –j4
+    # mvn –f pom.xml
+    # ant
+    - COVERITY_SCAN_BUILD_COMMAND="gcc HelloWorld.c"
+
+    - PROJECT_NAME="daksheshvyas/MyHelloWorld"
+
+    # Email address for notifications related to this build
+    - OWNER_EMAIL="scan-admin@coverity.com"
+
+    # Regular expression selects on which branches to run analysis
+    # Be aware of quotas. Do not run on every branch/commit
+    - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
 
    
 script: gcc HelloWorld.c
