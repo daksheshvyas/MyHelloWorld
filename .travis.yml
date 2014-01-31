@@ -5,7 +5,6 @@ env:
   global:
     # Your normal Travis CI build command
     # Normally this would be in the script: tag of .travis.yml, instead place it here
-    - STANDARD_BUILD_COMMAND="gcc HelloWorld.c"
 
 
 script: gcc HelloWorld.c
