@@ -1,7 +1,7 @@
 language: c
 compiler:
   - gcc
-  
+
 env:
   global:
     # Your normal Travis CI build command
@@ -26,14 +26,14 @@ env:
     - PROJECT_NAME="daksheshvyas/MyHelloWorld"
 
     # Email address for notifications related to this build
-    - OWNER_EMAIL="scan-admin@coverity.com"
+    - OWNER_EMAIL="dvyas@coverity.com"
 
     # Regular expression selects on which branches to run analysis
     # Be aware of quotas. Do not run on every branch/commit
     - COVERITY_SCAN_BRANCH_PATTERN="master"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
-    - secure: "hiMqthJk1RtWGYv4QaCTyWzlqIZIcu4VMPrGSX9zsjn9+twwOu5FIo15OoBXcVFdON+ubKnJXY6oTwALHyJN+Ai0wyIn1CP91zQwhgwQLYrGsEi0Mt6zNCy0NXwNkGarzH/XMwfD41Cp7vxX4ZZOA968LHOQhUMuZ9D2l7hA4+Y="
+    - secure: "GUvh3jb158jFJQyD2q3Y308av70u3HG6kxN5fRiwyti1AK2otEv7/tWseRral1zULHkjWQcX0MRWBkdFQJMuajEdGEzmJLKvBZbWLfxIfiKDKRlZwXjfaVJ+M/hhb52LvE1q979+k6nau6AImnlGJt/JCwgTpdURy2bO1Rm/6aE="
 
     - COVERITY_SCAN_BUILD_URL="https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
     - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
