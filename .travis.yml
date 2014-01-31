@@ -1,3 +1,7 @@
+language: c
+compiler:
+  - gcc
+  
 env:
   global:
     # Your normal Travis CI build command
