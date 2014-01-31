@@ -30,7 +30,7 @@ env:
 
     # Regular expression selects on which branches to run analysis
     # Be aware of quotas. Do not run on every branch/commit
-    - COVERITY_SCAN_BRANCH_PATTERN="master"
+    - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
     - secure: "GUvh3jb158jFJQyD2q3Y308av70u3HG6kxN5fRiwyti1AK2otEv7/tWseRral1zULHkjWQcX0MRWBkdFQJMuajEdGEzmJLKvBZbWLfxIfiKDKRlZwXjfaVJ+M/hhb52LvE1q979+k6nau6AImnlGJt/JCwgTpdURy2bO1Rm/6aE="
