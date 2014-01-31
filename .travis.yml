@@ -17,4 +17,5 @@ env:
      # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
     #
     # Examples
+    # Examples:
 script: gcc HelloWorld.c
