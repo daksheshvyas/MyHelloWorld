@@ -17,6 +17,6 @@ env:
      # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
     #
     # Examples:
-    # make –j4
+    # make -j4
 
 script: gcc HelloWorld.c
