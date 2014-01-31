@@ -22,14 +22,7 @@ env:
     # ant
     - COVERITY_SCAN_BUILD_COMMAND="gcc HelloWorld.c"
 
-    - PROJECT_NAME="daksheshvyas/MyHelloWorld"
-
-    # Email address for notifications related to this build
-    - OWNER_EMAIL="scan-admin@coverity.com"
-
-    # Regular expression selects on which branches to run analysis
-    # Be aware of quotas. Do not run on every branch/commit
-    - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
+    
 
    
 script: gcc HelloWorld.c
