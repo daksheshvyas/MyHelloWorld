@@ -22,14 +22,14 @@ env:
     - PROJECT_NAME="daksheshvyas/MyHelloWorld"
 
     # Email address for notifications related to this build
-    - OWNER_EMAIL="daksheshvyas@yahoo.com"
+    - OWNER_EMAIL="scan-admin@coverity.com"
 
     # Regular expression selects on which branches to run analysis
     # Be aware of quotas. Do not run on every branch/commit
     - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
-    - secure: "VHUB7Q7PzMWRl2dfzWfSHSIc66eRiKt30uk6AkRfHmL9S9ewUYE4WqYgz/3x2/58ak3WeiabBIzq35TxJlb5HQgMWLZX/Q52eZndl3P5RX1PUtTS7V4f7Ku/EFA94Xj6DpB/9LSwGTgcu4hZ7Z4o9sZFcM/RFhBE++5aiqAdGQk="
+    - secure: "iEcZ+p7KoFnCuYGX32JBxPSR3FFeLReCgZTkaxILyEnCj7MQluyZsX3L95byrSibvqvvKJcgTxm+ri4k3dNcDUoO9P3KEoQ0uAPtdU/lZ9a3FZ6I00AquDUoCZAfmm9b3uRbGSbsM3NR2Yy7TZ+409R26hLXbOajqnThziT4QiU="
 
     - COVERITY_SCAN_BUILD_URL="http://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
     - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
