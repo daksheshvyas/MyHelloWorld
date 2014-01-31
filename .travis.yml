@@ -18,5 +18,4 @@ env:
     #
     # Examples:
     # make –j4
-    # mvn –f pom.xml
 script: gcc HelloWorld.c
