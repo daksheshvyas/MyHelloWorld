@@ -44,7 +44,7 @@ env:
   # http://docs.travis-ci.com/user/build-configuration/#The-Build-Matrix
   matrix:
     - COVERITY_SCAN=0
-    - COVERITY_SCAN=1
+    #- COVERITY_SCAN=1
 
 script:
   # Move your original Travis CI build command to STANDARD_BUILD_COMMAND, above
