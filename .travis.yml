@@ -16,7 +16,7 @@ env:
     # Examples:
     # make –j4
     # mvn –f pom.xml
-    # ant -buildfile test.xml
+    # ant
     - COVERITY_SCAN_BUILD_COMMAND="gcc HelloWorld.c"
 
     - PROJECT_NAME="daksheshvyas/MyHelloWorld"
@@ -29,7 +29,7 @@ env:
     - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
-    - secure: "hiMqthJk1RtWGYv4QaCTyWzlqIZIcu4VMPrGSX9zsjn9+twwOu5FIo15OoBXcVFdON+ubKnJXY6oTwALHyJN+Ai0wyIn1CP91zQwhgwQLYrGsEi0Mt6zNCy0NXwNkGarzH/XMwfD41Cp7vxX4ZZOA968LHOQhUMuZ9D2l7hA4+Y="
+    - secure: "iEcZ+p7KoFnCuYGX32JBxPSR3FFeLReCgZTkaxILyEnCj7MQluyZsX3L95byrSibvqvvKJcgTxm+ri4k3dNcDUoO9P3KEoQ0uAPtdU/lZ9a3FZ6I00AquDUoCZAfmm9b3uRbGSbsM3NR2Yy7TZ+409R26hLXbOajqnThziT4QiU="
 
     - COVERITY_SCAN_BUILD_URL="http://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
     - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
