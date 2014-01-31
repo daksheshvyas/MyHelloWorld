@@ -12,6 +12,8 @@ env:
     # Pre-configuration steps that should not be analyzed
     # i.e. "./configure"
     - COVERITY_SCAN_BUILD_COMMAND_PREPEND=""
+   
+       # The build command with all of the arguments that you would apply to a manual `cov-build`
 
    
 script: gcc HelloWorld.c
