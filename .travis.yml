@@ -1,4 +1,25 @@
 language: c
 compiler:
   - gcc
+env:
+  global:
+    # Your normal Travis CI build command
+    # Normally this would be in the script: tag of .travis.yml, instead place it here
+    - STANDARD_BUILD_COMMAND="gcc HelloWorld.c"
+
+    # -- BEGIN Coverity Scan ENV
+
+    # Pre-configuration steps that should not be analyzed
+    # i.e. "./configure"
+    - COVERITY_SCAN_BUILD_COMMAND_PREPEND=""
+
+    # The build command with all of the arguments that you would apply to a manual `cov-build`
+    # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
+    #
+    # Examples:
+    # make –j4
+    # mvn –f pom.xml
+    # ant
+    - COVERITY_SCAN_BUILD_COMMAND="gcc HelloWorld.c"
+  
 script: gcc HelloWorld.c
