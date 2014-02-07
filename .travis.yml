@@ -4,48 +4,19 @@ compiler:
 
 env:
   global:
-    # Your normal Travis CI build command
-    # Normally this would be in the script: tag of .travis.yml, instead place it here
-    - STANDARD_BUILD_COMMAND="make -j4"
+   # The next declration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "gZ7lpopmQ1SPcn4yHvy0Zs8L2Okbruo6KO0gB2cQVHBkTfpFW0mvrOEAbv2MS4VY4tOVTUreKk8vN3VUhpcFJjvqbsXn0w4LupkZE0+BKrdxPBr8c3n+eUjtn9/ksg7tV+yROqEvtHYsgfeUAXX+aZsrGb8PksKs0dlo++Xxq6g="
 
-    # -- BEGIN Coverity Scan ENV
-
-    # Pre-configuration steps that should not be analyzed
-    # i.e. "./configure"
-    - COVERITY_SCAN_BUILD_COMMAND_PREPEND="./configure"
-
-    # The build command with all of the arguments that you would apply to a manual `cov-build`
-    # Usually this is the same as STANDARD_BUILD_COMMAND, exluding the automated test arguments
-    #
-    # Examples:
-    # make -j4
-    # mvn -f pom.xml
-    # ant -buildfile test.xml
-    - COVERITY_SCAN_BUILD_COMMAND="make -j4"
-
-    - PROJECT_NAME="daksheshvyas/MyHelloWorld"
-
-    # Email address for notifications related to this build
-    - OWNER_EMAIL="dvyas@coverity.com"
-
-    # Regular expression selects on which branches to run analysis
-    # Be aware of quotas. Do not run on every branch/commit
-    - COVERITY_SCAN_BRANCH_PATTERN="master"
-
-    # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
-    - secure: "GUvh3jb158jFJQyD2q3Y308av70u3HG6kxN5fRiwyti1AK2otEv7/tWseRral1zULHkjWQcX0MRWBkdFQJMuajEdGEzmJLKvBZbWLfxIfiKDKRlZwXjfaVJ+M/hhb52LvE1q979+k6nau6AImnlGJt/JCwgTpdURy2bO1Rm/6aE="
-
-    - COVERITY_SCAN_BUILD_URL="https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
-    - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
-
-    # -- END Coverity Scan ENV
-
-  # Note: Your build matrix configuration may vary. Consult Travis CI Docs for more information
-  # http://docs.travis-ci.com/user/build-configuration/#The-Build-Matrix
-  matrix:
-    - COVERITY_SCAN=0
-    - COVERITY_SCAN=1
-
-script:
-  # Move your original Travis CI build command to STANDARD_BUILD_COMMAND, above
-  - if [ "${COVERITY_SCAN}" = '1' ]; then eval "$COVERITY_SCAN_BUILD"; else eval "$STANDARD_BUILD_COMMAND"; fi
+addons:
+  coverity_scan:
+    project:
+      name: "daksheshvyas/MyHelloWorld"
+      description: "Your project description here"
+    notification_email: daksheshvyas@yahoo.com
+    build_command_prepend: "./configure"
+    build_command: "make -j4"
+    branch_pattern: master
+    
+#script:
+ # - if [ "${COVERITY_SCAN}" = '1' ]; then eval "$COVERITY_SCAN_BUILD"; else eval "$STANDARD_BUILD_COMMAND"; fi
