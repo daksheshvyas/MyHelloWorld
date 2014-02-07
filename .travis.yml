@@ -18,5 +18,6 @@ addons:
     build_command: "make -j4"
     branch_pattern: master
     
-#script:
+script:
+  - make -j4   
  # - if [ "${COVERITY_SCAN}" = '1' ]; then eval "$COVERITY_SCAN_BUILD"; else eval "$STANDARD_BUILD_COMMAND"; fi
