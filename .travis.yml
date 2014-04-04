@@ -13,7 +13,6 @@ addons:
     project:
       name: "daksheshvyas/MyHelloWorld"
       description: "Your project description here"
-    notification_email: daksheshvyas@yahoo.com
     build_command_prepend: "./configure"
     build_command: "make -j4"
     branch_pattern: master
