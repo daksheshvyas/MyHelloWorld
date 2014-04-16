@@ -1,4 +1,3 @@
-all: clean hellomake
 
 hellomake: HelloWorld.c
 	gcc -o hellomake HelloWorld.c x.c
