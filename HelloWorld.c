@@ -2,9 +2,9 @@
 
 int main(){
 
-        int x,i;
+        int i;
         
-        for(i=0;i<x;i++)
+        for(i=0;i<10;i++)
                 printf("Hello World");
 
         printf("Hello World printed %d times",x);
