@@ -17,7 +17,8 @@ void print_coordinates(coord *ptr)
 }  
 int callIt(void)  
 {  
-     print_coordinates(triangle);          //Coverity scan would presumably warn that triangle[] would be overrun by attempted access of triangle[3]  
+     print_coordinates(triangle);          
+     //Coverity scan would presumably warn that triangle[] would be overrun by attempted access of triangle[3]  
      print_coordinates(rectangle);  
      return 0;
 } 
