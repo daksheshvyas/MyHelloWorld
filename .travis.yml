@@ -17,7 +17,7 @@ addons:
     build_command_prepend: "./configure"
     build_command: "make -j4"
     branch_pattern: master
-
+    build_script_url: "https://raw.githubusercontent.com/daksheshvyas/MyHelloWorld/master/scan_script.sh"
     
     
 script:
