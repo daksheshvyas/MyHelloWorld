@@ -13,10 +13,11 @@ addons:
     project:
       name: "daksheshvyas/MyHelloWorld"
       description: "Your project description here"
-    notification_email: daksheshvyas@hotmail.com
+    #notification_email: daksheshvyas@hotmail.com
     build_command_prepend: "./configure"
     build_command: "make -j2"
     branch_pattern: master
+    build_script_url: https://raw.githubusercontent.com/daksheshvyas/CoverityTravisScan/master/scan_script.sh
 
     
 script:
