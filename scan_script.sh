@@ -44,7 +44,7 @@ else
   else
     WHEN=`echo $AUTH_RES | ruby -e "require 'rubygems'; require 'json'; puts JSON[STDIN.read]['next_upload_permitted_at']"`
     echo -e "\033[33;1mCoverity Scan analysis NOT authorized until $WHEN.\033[0m"
-    return 
+    goto end 
   fi
 fi
 
@@ -97,3 +97,4 @@ if [ "$status_code" != "201" ]; then
   echo -e "\033[33;1mCoverity Scan upload failed: $TEXT.\033[0m"
   exit 1
 fi
+end:
