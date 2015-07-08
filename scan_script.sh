@@ -33,6 +33,7 @@ else
 fi
 
 # Verify upload is permitted
+permit=true
 AUTH_RES=`curl -s --form project="$COVERITY_SCAN_PROJECT_NAME" --form token="$COVERITY_SCAN_TOKEN" $SCAN_URL/api/upload_permitted`
 if [ "$AUTH_RES" = "Access denied" ]; then
   echo -e "\033[33;1mCoverity Scan API access denied. Check COVERITY_SCAN_PROJECT_NAME and COVERITY_SCAN_TOKEN.\033[0m"
@@ -44,10 +45,11 @@ else
   else
     WHEN=`echo $AUTH_RES | ruby -e "require 'rubygems'; require 'json'; puts JSON[STDIN.read]['next_upload_permitted_at']"`
     echo -e "\033[33;1mCoverity Scan analysis NOT authorized until $WHEN.\033[0m"
-    goto end 
+    permit=false
   fi
 fi
 
+if [ "$permit" = true ]; then
 if [ ! -d $TOOL_BASE ]; then
   # Download Coverity Scan Analysis Tool
   if [ ! -e $TOOL_ARCHIVE ]; then
@@ -97,4 +99,4 @@ if [ "$status_code" != "201" ]; then
   echo -e "\033[33;1mCoverity Scan upload failed: $TEXT.\033[0m"
   exit 1
 fi
-end:
+fi
