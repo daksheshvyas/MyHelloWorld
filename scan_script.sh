@@ -44,7 +44,7 @@ else
     echo -e "\033[33;1mCoverity Scan analysis authorized per quota.\033[0m"
   else
     WHEN=`echo $AUTH_RES | ruby -e "require 'rubygems'; require 'json'; puts JSON[STDIN.read]['next_upload_permitted_at']"`
-    echo -e "\033[33;1mCoverity Scan analysis NOT authorized until $WHEN.\033[0m"
+    echo -e "\033[33;1mOops!Coverity Scan analysis NOT authorized until $WHEN.\033[0m"
     permit=false
   fi
 fi
