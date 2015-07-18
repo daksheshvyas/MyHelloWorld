@@ -6,5 +6,5 @@ Coverity Scan:
 
 This is README for MyHelloWorld
 It will print HelloWorld
-For any question, please contact me at scan-admin@coverity.com
+For any question related to Coverity Scan, contact at scan-admin@coverity.com
 
