@@ -1,1 +1,2 @@
-List of all the authors:
+List of all the authors: 
+ * Jon Smith
