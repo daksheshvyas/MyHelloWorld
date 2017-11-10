@@ -9,7 +9,7 @@ int main(){
                 printf("%d. %s",i+1,msg);
 
         printf("%s is printed %d times and program ends",msg,count);
-
+        char* ptrTmp = new char[64];
         return 0;
 
 }
