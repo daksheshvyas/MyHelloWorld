@@ -21,7 +21,8 @@ addons:
     branch_pattern: coverity_scan
 
 script:
-  - make -j2   
+  #- make -j2
+  - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-   
 
 
 
